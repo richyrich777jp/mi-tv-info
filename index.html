@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d18">
+  <meta name="description" content="Mi TV es un lanzador personal para webOS con accesos a aplicaciones y recomendaciones para Colombia.">
+  <title>Mi TV — proyecto personal para webOS</title>
+  <style>
+    :root{color-scheme:dark;--bg:#080d18;--panel:#101a2a;--line:#ffffff18;--text:#f4f7fc;--muted:#aab5c8;--blue:#a8c8ff;--cyan:#81d7e9}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 83% 16%,#38527d55,transparent 35%),radial-gradient(ellipse at 16% 83%,#473b7550,transparent 34%),linear-gradient(145deg,#080d18,#0d1523 58%,#10182a);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:inherit}
+    .wrap{width:min(1080px,calc(100% - 48px));margin:auto}
+    header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:750;letter-spacing:-.03em;font-size:20px}
+    .brand-icon{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,#d6e7ff,#7797cd);color:#101a2b;font-size:18px}
+    nav{display:flex;gap:26px;color:var(--muted);font-size:14px}
+    nav a{text-decoration:none}
+    nav a:hover{color:#fff}
+    .hero{padding:100px 0 78px;max-width:810px}
+    .eyebrow{color:var(--cyan);font-size:12px;letter-spacing:.17em;font-weight:750;text-transform:uppercase}
+    h1{font-size:clamp(48px,8vw,88px);line-height:.99;letter-spacing:-.07em;margin:22px 0 24px;font-weight:650}
+    h1 span{display:block;color:#b9cbed}
+    .lead{max-width:720px;color:#c3ccdb;font-size:19px;line-height:1.7;margin:0}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+    .chip{border:1px solid #ffffff20;border-radius:999px;background:#ffffff08;padding:8px 13px;color:#d7e0ee;font-size:13px}
+    section{scroll-margin-top:30px}
+    .section{padding:34px 0 64px}
+    .section-head{margin-bottom:22px}
+    h2{font-size:clamp(25px,4vw,36px);letter-spacing:-.045em;margin:0 0 8px}
+    .section-head p{color:var(--muted);margin:0;max-width:700px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{padding:23px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#162238d9,#0f1726e8);min-height:185px}
+    .card-icon{color:var(--blue);font-size:22px;margin-bottom:16px}
+    .card h3{font-size:17px;margin:0 0 8px;letter-spacing:-.02em}
+    .card p{font-size:14px;color:var(--muted);margin:0}
+    .services{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+    .service{padding:6px 10px;border-radius:8px;background:#ffffff0b;border:1px solid #ffffff12;font-size:12px;color:#d9e2f0}
+    .privacy{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .privacy .card{min-height:auto}
+    .notice{margin-top:20px;border-left:3px solid #8eb2ec;padding:12px 17px;color:#c1cbda;background:#ffffff06;font-size:14px}
+    .notice a{color:#c9dcff}
+    footer{border-top:1px solid #ffffff16;padding:24px 0 34px;color:#929eb2;font-size:13px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+    @media(max-width:700px){.wrap{width:min(100% - 32px,540px)}header{height:70px}nav{gap:14px;font-size:12px}.hero{padding:76px 0 58px}.lead{font-size:17px}.grid,.privacy{grid-template-columns:1fr}.card{min-height:0}footer{display:block}footer span{display:block;margin-top:6px}}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <a class="brand" href="#inicio" aria-label="Mi TV, inicio"><span class="brand-icon" aria-hidden="true">M</span><span>Mi TV</span></a>
+    <nav aria-label="Navegación principal"><a href="#proyecto">Proyecto</a><a href="#privacidad">Privacidad</a></nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="inicio">
+      <div class="eyebrow">Proyecto personal · Colombia</div>
+      <h1>Una pantalla de inicio<span>a tu manera.</span></h1>
+      <p class="lead">Mi TV es un lanzador personal para un televisor LG con webOS. Reúne accesos a las aplicaciones instaladas y ayuda a descubrir películas y series disponibles en Colombia.</p>
+      <div class="chips"><span class="chip">LG 65NANO75SQA</span><span class="chip">webOS 7.6</span><span class="chip">Versión 0.3.2</span><span class="chip">Uso personal y no comercial</span></div>
+    </section>
+
+    <section class="section" id="proyecto">
+      <div class="section-head"><h2>Qué hace Mi TV</h2><p>Es una interfaz de inicio instalada de forma privada en un televisor. No es un servicio de streaming ni distribuye películas o series.</p></div>
+      <div class="grid">
+        <article class="card"><div class="card-icon" aria-hidden="true">01</div><h3>Accesos rápidos</h3><p>Abre las aplicaciones disponibles en el televisor desde una pantalla personalizable.</p><div class="services"><span class="service">Apple TV</span><span class="service">Netflix</span><span class="service">Disney+</span><span class="service">YouTube</span><span class="service">AirPlay</span><span class="service">HDMI</span></div></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">02</div><h3>Recomendaciones locales</h3><p>Con una clave API de TMDB, muestra tendencias, carátulas, sinopsis y catálogos separados por servicio para Colombia.</p><p style="margin-top:10px">Los tráileres relacionados de YouTube se muestran como sugerencias de video.</p></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">03</div><h3>Diseñada para TV</h3><p>La interfaz se controla con el mando a distancia y guarda las preferencias y la clave API en el televisor.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="privacidad">
+      <div class="section-head"><h2>Privacidad y datos</h2><p>Mi TV es un proyecto personal y no tiene un servidor propio.</p></div>
+      <div class="privacy">
+        <article class="card"><h3>Almacenamiento local</h3><p>La clave de TMDB, las aplicaciones visibles y la caché de recomendaciones se guardan en el almacenamiento local del televisor. Mi TV no recoge ni envía esos datos a un servidor del proyecto.</p></article>
+        <article class="card"><h3>Fuentes del catálogo</h3><p>Los datos de películas y series y sus imágenes se solicitan a TMDB. La información de disponibilidad por proveedor procede de JustWatch a través de TMDB. Para ver recomendaciones se requiere una clave API personal de TMDB.</p></article>
+      </div>
+      <div class="notice"><strong>Atribución:</strong> This product uses the TMDB API but is not endorsed or certified by TMDB. Disponibilidad de streaming: JustWatch. <a href="https://www.themoviedb.org" target="_blank" rel="noopener noreferrer">The Movie Database (TMDB)</a>.</div>
+    </section>
+  </main>
+
+  <footer class="wrap"><span>Mi TV · Proyecto personal para webOS · Colombia</span><span>No afiliado con LG, Apple, Netflix, Disney ni YouTube.</span></footer>
+</body>
+</html>
